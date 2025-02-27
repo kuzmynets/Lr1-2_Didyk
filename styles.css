@@ -1,53 +1,120 @@
-.header h1
-{
-    background: darkgray;
-    align-content: center;
-    font-size: 30px;
-    color:#000000;
-    font-family: 'Bahnschrift', cursive;
-    animation: colorRotate 6s linear 0s infinite;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-@keyframes colorRotate
-{
-    from {
-        color: blue;
-    }
-    30% {
-        color: rgb(212, 45, 45);
-    }
-    35% {
-        color: rgb(50, 212, 45);
-    }
-    50% {
-        color: rgb(167, 212, 45);
-    }
-    55% {
-        color: rgb(212, 45, 176);
-    }
-    70% {
-        color: rgb(212, 181, 45);
-    }
-    75% {
-        color: rgb(45, 187, 212);
-    }
-    90% {
-        color: rgb(212, 45, 101);
-    }
-    95% {
-        color: rgb(45, 212, 148);
-    }
-    100% {
-        color: rgb(123, 45, 212);
-    }
+body {
+    font-family: Arial, sans-serif;
+    background-color: white;
+    color: black;
+    line-height: 1.6;
 }
 
-.left
-{
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.header {
+    background-color: green;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.left {
     float: left;
+    width: 20%;
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
 }
 
-.content
-{
-    margin-left: 150px;
+.left ul {
+    list-style-type: none;
+    margin-top: 20px;
+}
+
+.left ul li {
+    margin: 10px 0;
+}
+
+.left ul li a {
+    text-decoration: none;
+    color: black;
+}
+
+.left ul li a.active {
+    font-weight: bold;
+    color: deepskyblue;
+}
+
+.content {
+    float: right;
+    width: 75%;
+    padding: 20px;
+}
+
+.about {
+    margin-bottom: 20px;
+}
+
+.medicines {
+    clear: both;
+}
+
+.medicine-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.medicine {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px;
+    text-align: center;
+    width: calc(33% - 20px);
+}
+
+.medicine img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+figcaption {
+    margin-top: 10px;
+    font-size: 1.1em;
+    font-weight: bold;
+}
+
+.clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+@media (max-width: 768px) {
+    .left,
+    .content {
+        float: none;
+        width: 100%;
+    }
+    .medicine {
+        width: calc(50% - 20px);
+    }
+}
+
+@media (max-width: 480px) {
+    .medicine {
+        width: 100%;
+        margin: 10px 0;
+    }
 }

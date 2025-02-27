@@ -1,43 +1,64 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="uk">
 <head>
     <meta charset="UTF-8">
+    <title>Електронний довідник медичних препаратів</title>
     <link rel="stylesheet" href="styles.css">
-    <title>my site</title>
 </head>
-
 <body>
-    <div class="container">
-        <header class="header">
-            <h1>Welcome to the site!</h1>
-        </header>
+<div class="container">
+    <header class="header">
+        <h1>Ласкаво просимо до довідника медичних препаратів</h1>
+    </header>
 
     <aside class="left">
-        <img src="logo.png" alt = "Logo" width=100 height=100>
+        <img src="logo.png" alt="Логотип" width="100" height="100">
         <ul>
-            <li><a class="active" href="index.html">Home</a></li>
-            <li><a href="Form.html">Form</a></li>
-            <li><a href="Media.html">Media</a></li>
+            <li><a class="active" href="index.html">Головна</a></li>
+            <li><a href="Form.html">Форма</a></li>
+            <li><a href="Media.html">Медіа</a></li>
         </ul>
     </aside>
 
-    <main class ="content">
-        <h2>Про сатй</h2>
-        <p class = "about_site">Це електронний довідник медичних препаратів з фотографіями та описами.</p>
-        <p class = "medicine_preparate">Медичні препарати:</p>
-        <p class = "info_of_medicine"></p>
+    <main class="content">
+        <section class="about">
+            <h2>Про сайт</h2>
+            <p class="about_site">
+                Це електронний довідник медичних препаратів з фотографіями та описами.
+            </p>
+        </section>
+
+        <section class="medicines">
+            <h2>Медичні препарати</h2>
+            <div class="medicine-list">
+                <figure class="medicine">
+                    <div class="medicine_image">
+                        <a href = "valeriana.jpg">
+                        <img src="valeriana.jpg" alt="Валеріана">
+                        <figcaption>Валеріана</figcaption>
+                        </a>
+                    </div>
+                </figure>
+                <figure class="medicine">
+                    <div class="medicine_image">
+                        <a href = "paracetamol.jpg">
+                        <img src="paracetamol.jpg" alt="Парацетамол">
+                        <figcaption>Парацетамол</figcaption>
+                        </a>
+                    </div>
+                </figure>
+                <figure class="medicine">
+                    <div class="medicine_image">
+                        <a href = "ibuprofen.jpg">
+                        <img src="ibuprofen.jpg" alt="Ібупрофен">
+                        <figcaption>Ібупрофен</figcaption>
+                        </a>
+                    </div>
+                </figure>
+            </div>
+        </section>
     </main>
-
-    <div class="gallery">
-        <img src="valeriana.jpg" alt="Валеріана" width=200 height=400>
-        <img src="paracetamol.jpg" alt="Парацетамол" width=200 height=400>
-        <img src="ibuprofen.jpg" alt="Ібупрофен" width=200 height=400>
-        <div class="desk"> Валеріана</div>
-        <div class="desk"> Парацетамол</div>
-        <div class="desk"> Ібупрофен</div>
-    </div>
-
-
+    <div class="clearfix"></div>
 </div>
 </body>
 </html>
