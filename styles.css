@@ -4,6 +4,13 @@
     box-sizing: border-box;
 }
 
+.about_site {
+    font-family: Times New Roman;
+    color: black;
+    background-color: white;
+    font-size: x-large;
+}
+
 body {
     font-family: Arial, sans-serif;
     background-color: white;
