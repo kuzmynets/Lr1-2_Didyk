@@ -26,6 +26,15 @@ body {
     margin-bottom: 20px;
 }
 
+.footer {
+    padding: 55px 20px;
+    background-color: #4e4a4a;
+    color: white;
+    text-align: center;
+    font-size: 1em;
+    margin-top: 20px;
+}
+
 .left {
     float: left;
     width: 20%;
@@ -95,10 +104,59 @@ figcaption {
     font-weight: bold;
 }
 
+@keyframes colorRotate
+{
+    from {
+        color: blue;
+    }
+    30% {
+        color: rgb(212, 45, 45);
+    }
+    35% {
+        color: rgb(50, 212, 45);
+    }
+    50% {
+        color: rgb(167, 212, 45);
+    }
+    55% {
+        color: rgb(212, 45, 176);
+    }
+    70% {
+        color: rgb(212, 181, 45);
+    }
+    75% {
+        color: rgb(45, 187, 212);
+    }
+    90% {
+        color: rgb(212, 45, 101);
+    }
+    95% {
+        color: rgb(45, 212, 148);
+    }
+    100% {
+        color: rgb(123, 45, 212);
+    }
+}
+
+
 .clearfix::after {
     content: "";
     display: table;
     clear: both;
+}
+
+.video-container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 10px;
+}
+
+video {
+    width: 100%;
+    height: auto;
+    display: block;
+    border: 1px solid #ddd;
+    border-radius: 5px;
 }
 
 @media (max-width: 768px) {
@@ -106,9 +164,6 @@ figcaption {
     .content {
         float: none;
         width: 100%;
-    }
-    .medicine {
-        width: calc(50% - 20px);
     }
 }
 
@@ -130,7 +185,10 @@ figcaption {
     padding: 20px;
     margin-bottom: 20px;
 }
-
+.center{
+    text-align: center;
+    animation: colorRotate 6s linear 0s infinite;
+}
 .form-section h2 {
     margin-bottom: 15px;
     color: black;
@@ -180,4 +238,23 @@ button[type="submit"]:hover {
 {
     width: 100%;
     height: auto;
+}
+
+.radio-group {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    margin-top: 5px;
+}
+
+.radio-option {
+    display: inline-flex;
+    align-items: center;
+}
+
+.radio-option input[type="radio"] {
+    width: 18px;
+    height: 18px;
+    border: 2px solid #ccc;
+    margin-right: 5px;
 }
