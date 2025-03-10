@@ -7,59 +7,120 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<div class="container">
-    <header class="header">
-        <h1>Ласкаво просимо до довідника медичних препаратів</h1>
-    </header>
-    <aside class="left">
-        <img src="logo.png" alt="Логотип" width="100" height="100">
-        <ul>
-            <li><a class="active" href="index.html">Головна</a></li>
-            <li><a href="Form.html">Форма</a></li>
-            <li><a href="Media.html">Медіа</a></li>
-        </ul>
-    </aside>
-    <main class="content">
-        <section class="about">
-            <h2 class="center">Про сайт</h2>
-            <p class="about_site">
-                Це електронний довідник медичних препаратів з фотографіями та описами.
-            </p>
-        </section>
-        <section class="medicines">
-            <h2>Медичні препарати</h2>
-            <div class="medicine-list">
-                <figure class="medicine">
-                    <div class="medicine_image">
-                        <a href="valeriana.jpg">
-                            <img src="valeriana.jpg" alt="Валеріана">
-                            <figcaption>Валеріана</figcaption>
-                        </a>
-                    </div>
-                </figure>
-                <figure class="medicine">
-                    <div class="medicine_image">
-                        <a href="paracetamol.jpg">
-                            <img src="paracetamol.jpg" alt="Парацетамол">
-                            <figcaption>Парацетамол</figcaption>
-                        </a>
-                    </div>
-                </figure>
-                <figure class="medicine">
-                    <div class="medicine_image">
-                        <a href="ibuprofen.jpg">
-                            <img src="ibuprofen.jpg" alt="Ібупрофен">
-                            <figcaption>Ібупрофен</figcaption>
-                        </a>
-                    </div>
-                </figure>
+<header class="header">
+    <div class="nav-container">
+        <div class="brand">
+            <img src="logo.png" alt="Логотип" class="logo">
+            <span class="brand-name">Медичний довідник</span>
+        </div>
+        <nav class="main-nav" id="mainNav">
+            <ul>
+                <li><a class="active" href="index.html">Головна</a></li>
+                <li><a href="form.html">Форма</a></li>
+                <li><a href="media.html">Медіа</a></li>
+            </ul>
+        </nav>
+        <div class="burger" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+</header>
+<main class="main-content">
+    <section class="hero">
+        <h1 class="center">Електронний довідник медичних препаратів</h1>
+        <p class="about_site center">Сучасний та зручний ресурс з фотографіями та описами</p>
+    </section>
+    <section class="medicines">
+        <h2 class="center">Медичні препарати</h2>
+        <div class="medicine-list">
+            <div class="card">
+                <img src="valeriana.jpg" alt="Валеріана">
+                <h3>Валеріана</h3>
+                <p>Заспокійливий засіб для зняття напруги</p>
             </div>
-        </section>
-    </main>
-    <div class="clearfix"></div>
-    <footer class="footer">
-        &copy; Copyright
-    </footer>
-</div>
+            <div class="card">
+                <img src="paracetamol.jpg" alt="Парацетамол">
+                <h3>Парацетамол</h3>
+                <p>Знеболювальний і жарознижувальний препарат</p>
+            </div>
+            <div class="card">
+                <img src="ibuprofen.jpg" alt="Ібупрофен">
+                <h3>Ібупрофен</h3>
+                <p>Протизапальний засіб широкого спектра</p>
+            </div>
+            <div class="card">
+                <img src="amoxicillin.jpg" alt="Амоксицилін">
+                <h3>Амоксицилін</h3>
+                <p>Антибіотик для лікування бактеріальних інфекцій</p>
+            </div>
+            <div class="card">
+                <img src="aspirin.jpg" alt="Аспірин">
+                <h3>Аспірин</h3>
+                <p>Протизапальний, знеболювальний та жарознижувальний засіб</p>
+            </div>
+            <div class="card">
+                <img src="activated_carbon.jpg" alt="Активоване вугілля">
+                <h3>Активоване вугілля</h3>
+                <p>Сорбент для детоксикації організму</p>
+            </div>
+            <div class="card">
+                <img src="omeprazole.jpg" alt="Омепразол">
+                <h3>Омепразол</h3>
+                <p>Інгібітор протонної помпи для лікування кислотозалежних захворювань</p>
+            </div>
+            <div class="card">
+                <img src="loratadine.png" alt="Лоратадин">
+                <h3>Лоратадин</h3>
+                <p>Антигістамінний засіб для зняття симптомів алергії</p>
+            </div>
+            <div class="card">
+                <img src="noshpa.jpg" alt="Но-шпа">
+                <h3>Но-шпа</h3>
+                <p>Спазмолітик для зняття болю в органах травлення</p>
+            </div>
+            <div class="card">
+                <img src="lidocaine.jpg" alt="Лідокаїн">
+                <h3>Лідокаїн</h3>
+                <p>Анестетик для місцевої анестезії</p>
+            </div>
+            <div class="card">
+                <img src="metformin.jpg" alt="Метформін">
+                <h3>Метформін</h3>
+                <p>Препарат для лікування діабету 2 типу</p>
+            </div>
+            <div class="card">
+                <img src="ciprofloxacin.png" alt="Ципрофлоксацин">
+                <h3>Ципрофлоксацин</h3>
+                <p>Антибіотик для лікування інфекцій сечових шляхів</p>
+            </div>
+            <div class="card">
+                <img src="penicillin.jpg" alt="Пеніцилін">
+                <h3>Пеніцилін</h3>
+                <p>Антибіотик для лікування бактеріальних інфекцій</p>
+            </div>
+            <div class="card">
+                <img src="hydroxychloroquine.jpg" alt="Гідроксихлорохін">
+                <h3>Гідроксихлорохін</h3>
+                <p>Препарат для лікування малярії</p>
+            </div>
+            <div class="card">
+                <img src="ibuprofen2.jpg" alt="Ібупрофен 2">
+                <h3>Ібупрофен 2</h3>
+                <p>Додатковий протизапальний засіб</p>
+            </div>
+        </div>
+    </section>
+</main>
+<footer class="footer">
+    <p>&copy; copyright by mdidyk</p>
+</footer>
+<script>
+    function toggleMenu() {
+        const nav = document.getElementById('mainNav');
+        nav.classList.toggle('nav-open');
+    }
+</script>
 </body>
 </html>

@@ -3,35 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Реклама</title>
+    <title>Медіа</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<div class="container">
-    <header class="header">
-        <h1>Реклама медичних препаратів</h1>
-    </header>
-    <aside class="left">
-        <img src="logo.png" alt="Логотип" width="100" height="100">
-        <ul>
-            <li><a href="index.html">Головна</a></li>
-            <li><a href="Form.html">Форма</a></li>
-            <li><a class="active" href="Media.html">Медіа</a></li>
-        </ul>
-    </aside>
-    <main class="content">
-        <h2 class="center">Парацетамол &mdash; в будь-які незрозумілі ситуації</h2>
-        <div class="video-container">
-            <video controls>
-                <source src="ad.mp4" type="video/mp4">
-                Ваш браузер не підтримує відтворення відео.
-            </video>
+<header class="header">
+    <div class="nav-container">
+        <div class="brand">
+            <img src="logo.png" alt="Логотип" class="logo">
+            <span class="brand-name">Медичний довідник</span>
         </div>
-    </main>
-    <div class="clearfix"></div>
-    <footer class="footer">
-        &copy; Copyright
-    </footer>
-</div>
+        <nav class="main-nav" id="mainNav">
+            <ul>
+                <li><a href="index.html">Головна</a></li>
+                <li><a href="form.html">Форма</a></li>
+                <li><a class="active" href="media.html">Медіа</a></li>
+            </ul>
+        </nav>
+        <div class="burger" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+</header>
+
+<main class="main-content">
+    <div class="video-container">
+        <h2 class="color_animation">Реклама медичних препаратів</h2>
+        <video controls>
+            <source src="ad.mp4" type="video/mp4">
+            Ваш браузер не підтримує відтворення відео.
+        </video>
+    </div>
+</main>
+
+<footer class="footer">
+    <p>&copy; copyright by mdidyk</p>
+</footer>
+<script>
+    function toggleMenu() {
+        const nav = document.getElementById('mainNav');
+        nav.classList.toggle('nav-open');
+    }
+</script>
 </body>
 </html>

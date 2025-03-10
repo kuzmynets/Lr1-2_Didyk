@@ -3,67 +3,93 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Форма - Електронний довідник медичних препаратів</title>
+    <title>Форма</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<div class="container">
-    <header class="header">
-        <h1>Зворотній зв'язок</h1>
-    </header>
-    <aside class="left">
-        <img src="logo.png" alt="Логотип" width="100" height="100">
-        <ul>
-            <li><a href="index.html">Головна</a></li>
-            <li><a class="active" href="Form.html">Форма</a></li>
-            <li><a href="Media.html">Медіа</a></li>
-        </ul>
-    </aside>
-    <main class="content">
-        <section class="form-section">
-            <h2>Залишити відгук</h2>
-            <form action="#" method="post">
-                <div class="form-group">
-                    <label for="name">Ім'я:</label>
-                    <input type="text" id="name" name="name" required>
-                </div>
-                <div class="form-group">
-                    <label for="email">Email:</label>
-                    <input type="email" id="email" name="email" required>
-                </div>
-                <div class="form-group">
-                    <label for="medicine">Оберіть препарат:</label>
-                    <select id="medicine" name="medicine">
-                        <option value="valeriana">Валеріана</option>
-                        <option value="paracetamol">Парацетамол</option>
-                        <option value="ibuprofen">Ібупрофен</option>
-                    </select>
-                </div>
-                <div class="form-group">
-                    <p>Доступ до препарату:</p>
-                    <div class="radio-group">
-                        <div class="radio-option">
-                            <input type="radio" id="prescription" name="access" value="prescription" required>
-                            <label for="prescription">За рецептом</label>
-                        </div>
-                        <div class="radio-option">
-                            <input type="radio" id="otc" name="access" value="otc">
-                            <label for="otc">Без рецепту</label>
-                        </div>
+<header class="header">
+    <div class="nav-container">
+        <div class="brand">
+            <img src="logo.png" alt="Логотип" class="logo">
+            <span class="brand-name">Медичний довідник</span>
+        </div>
+        <nav class="main-nav" id="mainNav">
+            <ul>
+                <li><a href="index.html">Головна</a></li>
+                <li><a class="active" href="form.html">Форма</a></li>
+                <li><a href="media.html">Медіа</a></li>
+            </ul>
+        </nav>
+        <div class="burger" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+</header>
+
+<main class="main-content">
+    <section class="form-section">
+        <h2>Зворотній зв'язок</h2>
+        <form action="#" method="post">
+            <div class="form-group">
+                <label for="name">Ім'я:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="medicine">Оберіть препарат:</label>
+                <select id="medicine" name="medicine">
+                    <option value="valeriana">Валеріана</option>
+                    <option value="paracetamol">Парацетамол</option>
+                    <option value="ibuprofen">Ібупрофен</option>
+                    <option value="amoxicillin">Амоксицилін</option>
+                    <option value="aspirin">Аспірин</option>
+                    <option value="activated_carbon">Активоване вугілля</option>
+                    <option value="omeprazole">Омепразол</option>
+                    <option value="loratadine">Лоратадин</option>
+                    <option value="noshpa">Но-шпа</option>
+                    <option value="lidocaine">Лідокаїн</option>
+                    <option value="metformin">Метформін</option>
+                    <option value="ciprofloxacin">Ципрофлоксацин</option>
+                    <option value="penicillin">Пеніцилін</option>
+                    <option value="hydroxychloroquine">Гідроксихлорохін</option>
+                    <option value="ibuprofen2">Ібупрофен 2</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <p>Доступ до препарату:</p>
+                <div class="radio-group">
+                    <div class="radio-option">
+                        <input type="radio" id="prescription" name="access" value="prescription" required>
+                        <label for="prescription">За рецептом</label>
+                    </div>
+                    <div class="radio-option">
+                        <input type="radio" id="otc" name="access" value="otc">
+                        <label for="otc">Без рецепту</label>
                     </div>
                 </div>
-                <div class="form-group">
-                    <label for="message">Повідомлення:</label>
-                    <textarea id="message" name="message" rows="5" required></textarea>
-                </div>
-                <button type="submit">Надіслати</button>
-            </form>
-        </section>
-    </main>
-    <div class="clearfix"></div>
-    <footer class="footer">
-        &copy; Copyright
-    </footer>
-</div>
+            </div>
+            <div class="form-group">
+                <label for="message">Повідомлення:</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+            </div>
+            <button type="submit">Надіслати</button>
+        </form>
+    </section>
+</main>
+
+<footer class="footer">
+    <p>&copy; copyright by mdidyk</p>
+</footer>
+<script>
+    function toggleMenu() {
+        const nav = document.getElementById('mainNav');
+        nav.classList.toggle('nav-open');
+    }
+</script>
 </body>
 </html>
