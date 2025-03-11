@@ -135,8 +135,9 @@ body {
     border-radius: 8px;
 }
 .card h3 {
-    margin: 10px 0 5px;
+    margin: 5px 0 5px;
     color: #333;
+    font-size: 1em;
 }
 .card p {
     font-size: 0.9em;
