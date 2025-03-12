@@ -73,8 +73,7 @@ body {
     flex-direction: column;
     gap: 5px;
     cursor: pointer;
-    margin-left: auto;
-    margin-top: 20px;
+    margin-left: max(250px);
 }
 .burger span {
     width: 25px;
