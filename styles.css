@@ -34,6 +34,8 @@ body {
     margin: 0 auto;
 }
 .brand {
+    max-width: 1200px;
+    width: 100%;
     display: flex;
     align-items: center;
     gap: 10px;
@@ -73,7 +75,7 @@ body {
     flex-direction: column;
     gap: 5px;
     cursor: pointer;
-    margin-left: max(250px);
+    margin-left: auto;
 }
 .burger span {
     width: 25px;
